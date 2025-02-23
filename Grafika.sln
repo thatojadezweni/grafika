@@ -3,6 +3,10 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.0.31903.59
 MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "main", "main", "{167548C2-D397-408B-B60C-22DC6EB5CBDF}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Grafika", "main\Grafika\Grafika.csproj", "{5DBFF302-B529-44A5-8D22-43AC6BA2B7AA}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -10,5 +14,14 @@ Global
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{5DBFF302-B529-44A5-8D22-43AC6BA2B7AA} = {167548C2-D397-408B-B60C-22DC6EB5CBDF}
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{5DBFF302-B529-44A5-8D22-43AC6BA2B7AA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5DBFF302-B529-44A5-8D22-43AC6BA2B7AA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5DBFF302-B529-44A5-8D22-43AC6BA2B7AA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5DBFF302-B529-44A5-8D22-43AC6BA2B7AA}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal
