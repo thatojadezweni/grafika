@@ -5,11 +5,13 @@ namespace Grafika;
 
 public static class DependencyInjection
 {
-	public static IServiceCollection AddGrafika(this IServiceCollection services, 
-		Action<ConfigurationOptions> configureOptions)
+	public static IServiceCollection AddGrafika(this IServiceCollection services)
 	{
-		var options = new ConfigurationOptions();
-		configureOptions(options);
+		services.AddOptions<ConfigurationOptions>()
+			.BindConfiguration("Grafika")
+			.ValidateDataAnnotations()
+			.ValidateOnStart();
+		
 		return services;
 	}
 }

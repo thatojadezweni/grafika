@@ -1,15 +1,16 @@
+using System.ComponentModel.DataAnnotations;
+
 namespace Grafika.Configuration;
 
-public sealed class ConfigurationOptions
+internal sealed class ConfigurationOptions
 {
-	internal ConfigurationOptions()
-	{
-		
-	}
+	[Required(ErrorMessage = "Uri is required.")]
+	[Url(ErrorMessage = "Uri is in an invalid format.")]
+	public string Uri { get; init; }
 	
-	public string Uri { get; set; }
+	[Required(ErrorMessage = "Username is required.")]
+	public string Username { get; init; }
 	
-	public string Username { get; set; }
-	
-	public string Password { get; set; }
+	[Required(ErrorMessage = "Password is required.")]
+	public string Password { get; init; }
 }
